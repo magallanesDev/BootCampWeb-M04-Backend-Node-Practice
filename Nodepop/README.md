@@ -18,7 +18,6 @@ In development:
 npm run dev
 ```
 
-
 ## Inicializar la BD
 
 Para inicializar la BD al estado inicial, se puede usar el comando:
@@ -27,8 +26,7 @@ Para inicializar la BD al estado inicial, se puede usar el comando:
 npm run initdb
 ```
 
-* ATENCIÓN * Esto borrará todos los datos de la BD y cargará el estado inicial.
-
+***ATENCIÓN*** - Esto borrará todos los datos de la BD y cargará el estado inicial.   
 
 ## Métodos del API
 
