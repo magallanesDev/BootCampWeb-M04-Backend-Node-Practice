@@ -4,9 +4,7 @@ import fsPromise from 'fs/promises';
 import readline from 'readline';
 
 // conexión a la base de datos
-// const dbConnection = require('./lib/connectMongoose');
 import dbConnection from "./lib/connectMongoose.js";
-// import anuncioData  from './initDB.anuncios.json';
 
 // cargar modelo
 import Anuncio from './models/Anuncio.js';

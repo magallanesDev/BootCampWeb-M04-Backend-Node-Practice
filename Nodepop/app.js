@@ -17,11 +17,19 @@ require('./lib/connectMongoose');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.locals.title = 'Nodepop';
+
+// Middlewares de nuestra aplicación
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+// Rutas de mi API
+ app.use('/api/anuncios', require('./routes/api/anuncios'));
+
 
 // Rutas de mi website
 app.use('/', indexRouter);
