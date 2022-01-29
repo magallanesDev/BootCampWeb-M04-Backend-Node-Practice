@@ -6,14 +6,9 @@ const Anuncio = require('../../models/Anuncio');
 
 const router = express.Router();
 
-/*
- * /api/anuncios:
- *  get:
- *    description: Devuelve una lista de anuncios
- *    responses:
- *     200:
- *        description: Returns JSON
- */
+
+// GET /api/anuncios
+// Devuelve lista de anuncios
 router.get('/', async (req, res, next) => {
   try {
     const nombre = req.query.nombre;
@@ -62,7 +57,7 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // POST /api/anuncios
-// Crea un nuevo anuncios
+// Crea un nuevo anuncio
 router.post('/', async (req, res, next) => {
   try {
     const anuncioData = req.body;
@@ -94,8 +89,8 @@ router.delete('/:id', async (req, res, next) => {
 
 })
 
-// PUT /api/anuncios:id
-// Actualizar un anuncio
+// PUT /api/anuncios/:id
+// Modifica un anuncio
 router.put('/:id', async (req, res, next) => {
   try {
     const id = req.params.id;

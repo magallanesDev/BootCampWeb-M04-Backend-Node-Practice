@@ -60,3 +60,14 @@ Crear un anuncio:
 Eliminar un anuncio:
 
 - DELETE /api/anuncios/:id
+
+Modifica un anuncio:
+
+- PUT /api/anuncios/:id
+
+
+## Imágenes de los anuncios
+
+Las imágenes de los anuncios están en la carpeta ./public/images/anuncios
+
+Podemos ver cada imagen haciendo una petición en la url http://localhost:3000/images/anuncios/<imagen.jepg>
