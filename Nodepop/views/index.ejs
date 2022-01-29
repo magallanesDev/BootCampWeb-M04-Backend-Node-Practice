@@ -15,8 +15,16 @@
         <li>Venta: <%= producto.venta %></li>
         <li>Precio: <%= producto.precio %>€</li>
         <li>Foto: <%= producto.foto %> </li>
-        <li>Tags: <% producto.tags.forEach( tag => { %> 
-          <%= tag %>
+        <li>Tags: <% producto.tags.forEach( (tag, i) => { %> 
+          
+          <% if  (i+1 < producto.tags.length) { %>
+            <%= tag %>,
+          <% } %>
+
+          <% if  (i+1 === producto.tags.length) { %>
+            <%= tag %>
+          <% } %>
+          
           <% }) %>
         </li>
       </ul>
