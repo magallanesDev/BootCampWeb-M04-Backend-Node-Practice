@@ -34,10 +34,7 @@ router.get('/', async (req, res, next) => {
       filtros.precio = precio
     }
     
-   
     const anuncios = await Anuncio.lista(filtros, skip, limit, select, sort);
-
-    console.log(anuncios);
 
     res.render('index', { results: anuncios });
 
