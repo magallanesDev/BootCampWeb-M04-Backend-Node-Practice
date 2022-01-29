@@ -7,5 +7,18 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <br>
+    <h3>LISTA DE ANUNCIOS:%></h3>
+    <p><% results.forEach( producto => { %> 
+      <h4><%= producto.nombre %></h4>
+      <ul>
+        <li>Venta: <%= producto.venta %></li>
+        <li>Precio: <%= producto.precio %>€</li>
+        <li>Foto: <%= producto.foto %> </li>
+        <li>Tags: <%= producto.tags[0] %>, <%= producto.tags[1] %></li>
+      </ul>
+      <% }) %>
+    </p>
+  
   </body>
 </html>
