@@ -36,8 +36,11 @@ Lista de anuncios:
 
 - /api/anuncios
 
-Filtros:
+FILTROS:
 Por nombre podemos poner la/s primera/s letra/s
+Por tipo de anuncio, venta (venta=true) o búsqueda (venta=false)
+Por precio
+Por tag
 - http://localhost:3000/api/anuncios/?nombre=Bic&venta=true&precio=230.15&tag=motor
 
 
@@ -73,9 +76,12 @@ Modifica un anuncio:
 Para entrar en la página web, mostrándonos la lista de anuncios:
 - http://localhost:3000
 
-Filtros:
+FILTROS:
 Por nombre podemos poner la/s primera/s letra/s
-- http://localhost:3000/api/anuncios/?nombre=Bic&venta=true&precio=230.15&tag=motor
+Por tipo de anuncio, venta (venta=true) o búsqueda (venta=false)
+Por precio
+Por tag
+- http://localhost:3000/?nombre=Bic&venta=true&precio=230.15&tag=motor
 
 Paginación:
 - http://localhost:3000/?skip=1&limit=2
