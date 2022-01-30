@@ -37,17 +37,16 @@ Lista de anuncios:
 - /api/anuncios
 
 FILTROS:
-Por nombre podemos poner la/s primera/s letra/s
-Por tipo de anuncio, venta (venta=true) o búsqueda (venta=false)
-Por precio
+Por nombre podemos poner la/s primera/s letra/s.
+Por tipo de anuncio, venta (venta=true) o búsqueda (venta=false).
+Por precio.
 Por tag
 - http://localhost:3000/api/anuncios/?nombre=Bic&venta=true&precio=230.15&tag=motor
-
 
 Paginación:
 - http://localhost:3000/api/anuncios/?skip=1&limit=2
 
-Eligiendo qué campos quiero:
+Eligiendo qué campos queremos:
 - http://localhost:3000/api/anuncios/?select=nombre -_id precio
 
 Ordenación:
@@ -77,10 +76,10 @@ Para entrar en la página web, mostrándonos la lista de anuncios:
 - http://localhost:3000
 
 FILTROS:
-Por nombre podemos poner la/s primera/s letra/s
-Por tipo de anuncio, venta (venta=true) o búsqueda (venta=false)
-Por precio
-Por tag
+Por nombre podemos poner la/s primera/s letra/s.
+Por tipo de anuncio, venta (venta=true) o búsqueda (venta=false).
+Por precio.
+Por tag.
 - http://localhost:3000/?nombre=Bic&venta=true&precio=230.15&tag=motor
 
 Paginación:
