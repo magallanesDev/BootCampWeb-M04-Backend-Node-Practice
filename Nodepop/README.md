@@ -37,12 +37,14 @@ Lista de anuncios:
 - /api/anuncios
 
 Filtros:
-- http://localhost:3000/api/anuncios/?nombre='Bicicleta'&precio=230.15
+Por nombre podemos poner la/s primera/s letra/s
+- http://localhost:3000/api/anuncios/?nombre=Bic&precio=230.15&venta=true
+
 
 Paginación:
-- http://localhost:3000/api/anuncios/?skip=4&limit=2
+- http://localhost:3000/api/anuncios/?skip=1&limit=2
 
-Eligiendo que campos quiero:
+Eligiendo qué campos quiero:
 - http://localhost:3000/api/anuncios/?select=nombre -_id precio
 
 Ordenación:
@@ -66,8 +68,25 @@ Modifica un anuncio:
 - PUT /api/anuncios/:id
 
 
+## Página Web
+
+Para entrar en la página web, mostrándonos la lista de anuncios:
+- http://localhost:3000
+
+Filtros:
+Por nombre podemos poner la/s primera/s letra/s
+- http://localhost:3000/?nombre=Bic&precio=230.15&venta=true
+
+Paginación:
+- http://localhost:3000/?skip=1&limit=2
+
+Ordenación:
+- http://localhost:3000/?sort=nombre precio
+
+
+
 ## Imágenes de los anuncios
 
 Las imágenes de los anuncios están en la carpeta ./public/images/anuncios
 
-Podemos ver cada imagen haciendo una petición en la url http://localhost:3000/images/anuncios/<imagen.jepg>
+Podemos ver cada imagen haciendo una petición en la url http://localhost:3000/images/anuncios/<imagen.jpeg>

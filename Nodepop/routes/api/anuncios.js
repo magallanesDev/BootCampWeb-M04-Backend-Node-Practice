@@ -11,20 +11,30 @@ const router = express.Router();
 router.get('/', async (req, res, next) => {
   try {
     const nombre = req.query.nombre;
+    const venta = req.query.venta;
     const precio = req.query.precio;
+    const tag = req.query.tag;
     const skip = req.query.skip;
     const limit = req.query.limit;
-    const select = req.query.select; // campos que quiero
+    const select = req.query.select; // seleccionamos los campos deseados
     const sort = req.query.sort;
 
     const filtros = {};
 
     if (nombre) {
-      filtros.nombre = nombre;
+      filtros.nombre = new RegExp('^' + req.query.nombre, "i");;
+    }
+
+    if (venta) {
+      filtros.venta = venta;
     }
 
     if (precio) {
       filtros.precio = precio
+    }
+
+    if (tag) {
+      filtros.tag = tag;
     }
 
     const anuncios = await Anuncio.lista(filtros, skip, limit, select, sort);

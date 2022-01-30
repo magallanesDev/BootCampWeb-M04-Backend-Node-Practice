@@ -18,23 +18,27 @@ router.get('/', async (req, res, next) => {
   try {
     
     const nombre = req.query.nombre;
+    const venta = req.query.venta;
     const precio = req.query.precio;
     const skip = req.query.skip;
     const limit = req.query.limit;
-    const select = req.query.select; // campos que quiero
     const sort = req.query.sort;
 
     const filtros = {};
 
     if (nombre) {
-      filtros.nombre = nombre;
+      filtros.nombre = new RegExp('^' + req.query.nombre, "i");;
+    }
+
+    if (venta) {
+      filtros.venta = venta;
     }
 
     if (precio) {
       filtros.precio = precio
     }
     
-    const anuncios = await Anuncio.lista(filtros, skip, limit, select, sort);
+    const anuncios = await Anuncio.lista(filtros, skip, limit, sort);
 
     res.render('index', { results: anuncios });
 
