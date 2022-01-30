@@ -34,7 +34,7 @@ router.get('/', async (req, res, next) => {
     }
 
     if (tag) {
-      filtros.tag = tag;
+      filtros.tags = tag;
     }
 
     const anuncios = await Anuncio.lista(filtros, skip, limit, select, sort);

@@ -38,7 +38,7 @@ Lista de anuncios:
 
 Filtros:
 Por nombre podemos poner la/s primera/s letra/s
-- http://localhost:3000/api/anuncios/?nombre=Bic&precio=230.15&venta=true
+- http://localhost:3000/api/anuncios/?nombre=Bic&venta=true&precio=230.15&tag=motor
 
 
 Paginación:
@@ -75,7 +75,7 @@ Para entrar en la página web, mostrándonos la lista de anuncios:
 
 Filtros:
 Por nombre podemos poner la/s primera/s letra/s
-- http://localhost:3000/?nombre=Bic&precio=230.15&venta=true
+- http://localhost:3000/api/anuncios/?nombre=Bic&venta=true&precio=230.15&tag=motor
 
 Paginación:
 - http://localhost:3000/?skip=1&limit=2
